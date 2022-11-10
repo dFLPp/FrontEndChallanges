@@ -1,2 +1,2 @@
-# FrontEndChallanges
-Projetos que fiz e que você pode tentar copiar/melhorar, usar como refêrencia no geral.
+# Yo 👋
+Esse repo. é um conjunto de projetos que fiz e que, por pena, não deletei. Use como referência para seus projetos ou whatever. 
