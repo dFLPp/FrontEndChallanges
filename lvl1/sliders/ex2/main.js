@@ -1,40 +1,35 @@
-const dots = document.querySelectorAll(".img-guider button");
-const images = document.querySelectorAll(".img-cont img");
-const nextItem = document.getElementById("next");
-const prevItem = document.getElementById("prev");
+"use strict";
 
-let i = 0;
-let j = 5;
+const nextBTN = document.getElementById("next")
+const prevBTN = document.getElementById("prev")
+const slider = document.getElementById("slider")
+let images = [...slider.children] // inconsistencia: se adicionarmos mais imagens depois que a pagina carregar, não vai funcionar
 
-function next(){
-    document.getElementById("item" + (i+1)).classList.remove("active");
-    i = ( j + i + 1) % j;
-    document.getElementById("item" + (i+1)).classList.add("active");
-    indicator(i+1);
+let active = 0
+let total = 5
+
+const removeActive = (current) => {
+    console.log(current)
+    images[current].classList.remove("active")
 }
 
-function prev(){
-    document.getElementById("item" + (i+1)).classList.remove("active");
-    i = ( j + i - 1) % j;
-    document.getElementById("item" + (i+1)).classList.add("active");
-    indicator(i+1);
+const addActive = (current) => {
+    images[current].classList.add("active")
 }
 
-function indicator(num){
-    dots.forEach(dot => {
-        dot.style.backgroundColor = "#FCFFF7";
-    });
-    document.querySelector(".img-guider button:nth-child(" + num + ")").style.backgroundColor = "var(--pr-cl)";
+const nextIMG = (current) => {
+    removeActive(current)
+    let succeeding = (total + current + 1) % total
+    active = succeeding
+    addActive(succeeding)
 }
 
-function dot(index){
-    images.forEach(function(image){
-        image.classList.remove("active");
-    });
-    document.getElementById("item" + index).classList.add("active");
-    i = index - 1;
-    indicator(index);
+const prevIMG = (current) => {
+    removeActive(current)
+    let succeeding = ( total + current - 1) % total
+    active = succeeding
+    addActive(succeeding)
 }
 
-nextItem.addEventListener("click", next);
-prevItem.addEventListener("click", prev);
+nextBTN.addEventListener('click', () => nextIMG(active))
+prevBTN.addEventListener('click', () => prevIMG(active))
