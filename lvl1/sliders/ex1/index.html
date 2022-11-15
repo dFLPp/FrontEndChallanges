@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo 1 - sliders lvl1</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+
+        main{
+            width: 75%;
+            height: 90vh;
+            margin: auto auto;
+            position: relative;
+        }
+
+        #view{
+            position: absolute;
+            width: 100%;
+            height: 85%;
+            border: 1px solid black;
+            background-size: cover;
+        }
+
+        #bar{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 15%;
+            border: 1px solid black;
+        }
+
+        .option{
+            width: 20%;
+            height: 100%;
+            float: left;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div id="view"></div>
+        <div id="bar">
+            <div class="option" style="background-image: url('https://www.amateurphotographer.co.uk/wp-content/uploads/2022/03/Landscape-South-Island-New-Zealand-820x500.jpg');"></div>
+            <div class="option" style="background-image: url('https://www.amateurphotographer.co.uk/wp-content/uploads/2022/01/59-TPOTY-2021-LandAdventure-Win-JFischer.jpg');"></div>
+            <div class="option" style="background-image: url('https://www.amateurphotographer.co.uk/wp-content/uploads/2022/01/72-TPOTY-2021-LandAdventure-BSI-Win-PLearmond.jpg');"></div>
+            <div class="option" style="background-image: url('https://www.amateurphotographer.co.uk/wp-content/uploads/2022/04/web03_Dave_Smith.jpg');"></div>
+            <div class="option" style="background-image: url('https://www.amateurphotographer.co.uk/wp-content/uploads/2022/03/Landscape-with-trees-San-Quirico-dorcia-Tuscany-Italy.jpg');"></div>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
