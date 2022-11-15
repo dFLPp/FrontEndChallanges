@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo 2 - sliders lvl1</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="img-cont">
+            <img src="https://www.amateurphotographer.co.uk/wp-content/uploads/2022/03/Landscape-South-Island-New-Zealand-820x500.jpg" id="item1" class="active">
+            <img src="https://www.amateurphotographer.co.uk/wp-content/uploads/2022/05/webChris-Frost-Woolland-Woods-Dorset-scaled-1.jpg" id="item2">
+            <img src="https://www.amateurphotographer.co.uk/wp-content/uploads/2022/01/59-TPOTY-2021-LandAdventure-Win-JFischer.jpg" id="item3">
+            <img src="https://www.amateurphotographer.co.uk/wp-content/uploads/2022/01/72-TPOTY-2021-LandAdventure-BSI-Win-PLearmond.jpg" id="item4">
+            <img src="https://www.amateurphotographer.co.uk/wp-content/uploads/2022/04/web03_Dave_Smith.jpg" id="item5">
+        </div>
+        <button id="prev"> &lt; </button>
+        <button id="next"> &gt; </button>
+        <div class="img-guider">
+            <button onclick="dot(1)"></button>
+            <button onclick="dot(2)"></button>
+            <button onclick="dot(3)"></button>
+            <button onclick="dot(4)"></button>
+            <button onclick="dot(5)"></button>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
