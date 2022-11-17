@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>blog </title>
+</head>
+<body class="text-base bg-violet-300 sunTheme">
+    <header class="pb-24 z-50 relative">
+        <nav class="text-blue-100 bg-indigo-400 fixed w-screen shadow-lg" id="nav-bar">
+            <div class="grid grid-cols-2 lg:grid-cols-3 " id="gambiarra1">
+                <div class="">
+                    <a href="./index.html">
+                        <h2 class="font-bold text-3xl text-left p-5  md:text-center">Logo</h2>
+                    </a>
+                </div>
+                <div class="hidden lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:p-2 lg:text-center lg:text-lg">
+                    <a href="#" class="m-1"><span class="px-5 font-bold">Home</span> </a>              
+                    <a href="#" class="m-1"><span class="px-5">Categories</span></a>
+                    <a href="#" class="m-1"><span class="px-5">Reviews</span>   </a>               
+                    <a href="#" class="m-1"><span class="px-5">News</span>   </a>            
+                    <a href="#" class="m-1"><span class="px-5">Membership</span></a>
+                    <a href="#" class="m-1"><span class="px-5">Contact</span>   </a>           
+                </div>
+
+                <div class="flex justify-evenly ">
+                    <button class="bg-transparent hidden" id="sun">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </button>
+                    <button class="bg-transparent" id="moon">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </button>
+                    <button id= "search" class="bg-transparent">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+
+                    <button class="hidden lg:block">
+                        <div class="p-2 bg-purple-900 rounded-md">sign-in</div>
+                    </button>
+                    <button class="hidden lg:block">
+                        <div class="p-2 bg-purple-600 rounded-md">sign-up</div>
+                    </button>
+                    
+                    <div class="lg:hidden pt-6">
+                        <button class="bg-transparent" id="menu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        </button>
+                        <button class="hidden" id="close-menu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                    <a href="#" id="ocult" class="hidden">sign-in</a>
+                    <a href="#" id="ocult" class="hidden"> <span>sign-up</span></a>
+                </div>
+            </div>
+            <div class="bg-indigo-200 text-gray-800 text-center p-5 text-lg w-1/2 md:w-1/3 absolute right-0 m-3 hidden rounded-md" id="content">
+                <ul>
+                    <li class="font-bold pb-4">
+                        <a href="#">
+                            home
+                        </a>
+                    </li>
+                    <li class="pb-4">
+                        <a href="#">
+                            categories
+                        </a>
+                    </li>
+                    <li class="pb-4">
+                        <a href="#">
+                            reviews
+                        </a>
+                    </li>
+                    <li class="pb-4">
+                        <a href="#">
+                            news
+                        </a>
+                    </li>
+                    <li class="pb-4">
+                        <a href="#">
+                            membership
+                        </a>
+                    </li>
+                    <li class="pb-4">
+                        <a href="#">
+                            sign-in
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sign-up
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="search-div" class="hidden">
+        <div id="frufru-search" class="max-w-full w-full text-black h-screen fixed top-0 left-0 z-50 bg-purple-200 flex">
+                <div class="m-auto flex flex-col text-center gap-8">
+                    <form action="" class="flex justify-center mx-3 text-base">
+                        <input class="inline-block border-black border-2 p-2 bg-transparent outline-none " type="text" placeholder="what you want?">
+                        <button id="socorro" class="inline-block border-black border-l-0 border-2 p-2 bg-green-100" type="submit">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </button>
+                    </form>
+                    <span class="text-sm ">ESC to close</span>
+                </div>
+                <button id="closeSearchDiv" class="absolute right-4 top-10 bg-green-100 border-black border-2 p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+        </div>
+    </div>
+
+    <div class="lg:grid lg:grid-cols-2 lg:p-10">
+    <div class="lg:col-span-1">
+        <div class="grid md:grid-cols-2 lg:-mt-2">
+            <a href="https://www.youtube.com">
+                <article class="mb-6 p-2">
+                    <div class="relative md:col-span-1 w-11/12 m-auto h-80 bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                        <span class="flex justify-end"><p class="px-4 py-2 mx-2 my-2 bg-violet-50">Tag</p></span>
+
+                        <div class="absolute shadow-md bottom-0 w-full p-2 gap-2 h-20 grid grid-cols-2 bg-violet-50">
+                            <span class="col-span-1 text-center">dd/mm/aaaa</span>
+                            <span class="col-span-1 text-center">outra coisa</span>
+                            <span class="col-span-2 font-bold text-2xl text-center font-mono">titulo do artigo</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a href="https://www.youtube.com">
+                <article class="mb-6 p-2">
+                    <div class="relative md:col-span-1 w-11/12 m-auto h-80 bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                        <span class="flex justify-end"><p class="px-4 py-2 mx-2 my-2 bg-violet-50">Tag</p></span>
+
+                        <div class="absolute shadow-md bottom-0 w-full p-2 gap-2 h-20 grid grid-cols-2 bg-violet-50">
+                            <span class="col-span-1 text-center">dd/mm/aaaa</span>
+                            <span class="col-span-1 text-center">outra coisa</span>
+                            <span class="col-span-2 font-bold text-2xl text-center font-mono">titulo do artigo</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a href="https://www.youtube.com" class="hidden lg:block">
+                <article class="mb-6 p-2">
+                    <div class="relative md:col-span-1 w-11/12 m-auto h-80 bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                        <span class="flex justify-end"><p class="px-4 py-2 mx-2 my-2 bg-violet-50">Tag</p></span>
+
+                        <div class="absolute shadow-md bottom-0 w-full p-2 gap-2 h-20 grid grid-cols-2 bg-violet-50">
+                            <span class="col-span-1 text-center">dd/mm/aaaa</span>
+                            <span class="col-span-1 text-center">outra coisa</span>
+                            <span class="col-span-2 font-bold text-2xl text-center font-mono">titulo do artigo</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a href="https://www.youtube.com" class="hidden lg:block">
+                <article class="mb-6 p-2">
+                    <div class="relative md:col-span-1 w-11/12 m-auto h-80 bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                        <span class="flex justify-end"><p class="px-4 py-2 mx-2 my-2 bg-violet-50">Tag</p></span>
+
+                        <div class="absolute shadow-md bottom-0 w-full p-2 gap-2 h-20 grid grid-cols-2 bg-violet-50">
+                            <span class="col-span-1 text-center">dd/mm/aaaa</span>
+                            <span class="col-span-1 text-center">outra coisa</span>
+                            <span class="col-span-2 font-bold text-2xl text-center font-mono">titulo do artigo</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
+        </div>
+        <a href="https://www.youtube.com">
+            <article class="mb-6 p-2">
+                    <div class="relative w-12/12 md:col-span-2 m-auto h-80 bg-cover mx-4" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                        <span class="flex justify-end"><p class="px-4 py-2 mx-2 my-2 bg-violet-50">Tag</p></span>
+
+                        <div class="absolute shadow-md bottom-0 w-full p-2 gap-2 h-20 grid grid-cols-2 bg-violet-50">
+                            <span class="col-span-1 text-center">dd/mm/aaaa</span>
+                            <span class="col-span-1 text-center">outra coisa</span>
+                            <span class="col-span-2 font-bold text-2xl text-center font-mono">titulo do artigo</span>
+                        </div>
+                    </div>
+            </article>
+        </a>  
+    </div>
+
+    <div class="lg:col-span-1">
+        <div class="pt-6 bg-white">
+            <div class="text-3xl text-center py-5"> Latest uploads </div>
+            <a href="https://www.youtube.com">
+                <article class="mb-6 p-2">
+                    <div class="grid md:grid-cols-2 relative pb-8">
+                        <div class="md:col-span-1">
+                            <div class="relative md:col-span-1 w-11/12 m-auto h-80 md:h-60 lg:h-40 bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                            <span class="flex justify-start"><p class="px-4 py-2 mx-2 my-2 rounded-full bg-violet-50">1</p></span>
+                        </div>
+                            <div class="absolute bottom-0 w-full p-2 gap-2 grid grid-cols-2 h-20 bg-violet-50 md:col-span-1 md:h-60 lg:h-40 md:w-1/2 md:right-0 md:top-0 md:flex flex-col md:align-middle">
+                                <div class="col-span-1 text-center md:translate-y-32 lg:-mt-12">dd/mm/aaaa</div>
+                                <div class="col-span-1 text-center md:translate-y-16">outra coisa</div>
+                                <div class="col-span-2 font-bold text-2xl text-center font-mono pb-8 border-b-2 border-gray-300 md:border-none md:pb-0"><p>titulo do artigo</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a href="https://www.youtube.com">
+                <article class="mb-6 p-2">
+                    <div class="grid md:grid-cols-2 relative pb-8">
+                        <div class="md:col-span-1">
+                            <div class="relative md:col-span-1 w-11/12 m-auto h-80 md:h-60 lg:h-40 bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                            <span class="flex justify-start"><p class="px-4 py-2 mx-2 my-2 rounded-full bg-violet-50">2</p></span>
+                        </div>
+                            <div class="absolute bottom-0 w-full p-2 gap-2 grid grid-cols-2 h-20 bg-violet-50 md:col-span-1 md:h-60 lg:h-40 md:w-1/2 md:right-0 md:top-0 md:flex flex-col md:align-middle">
+                                <div class="col-span-1 text-center md:translate-y-32 lg:-mt-12">dd/mm/aaaa</div>
+                                <div class="col-span-1 text-center md:translate-y-16">outra coisa</div>
+                                <div class="col-span-2 font-bold text-2xl text-center font-mono pb-8 border-b-2 border-gray-300 md:border-none md:pb-0"><p>titulo do artigo</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a href="https://www.youtube.com">
+                <article class="mb-6 p-2">
+                    <div class="grid md:grid-cols-2 relative pb-8">
+                        <div class="md:col-span-1">
+                            <div class="relative md:col-span-1 w-11/12 m-auto h-80 md:h-60 lg:h-40 bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                            <span class="flex justify-start"><p class="px-4 py-2 mx-2 my-2 rounded-full bg-violet-50">3</p></span>
+                        </div>
+                            <div class="absolute bottom-0 w-full p-2 gap-2 grid grid-cols-2 h-20 bg-violet-50 md:col-span-1 md:h-60 lg:h-40 md:w-1/2 md:right-0 md:top-0 md:flex flex-col md:align-middle">
+                                <div class="col-span-1 text-center md:translate-y-32 lg:-mt-12">dd/mm/aaaa</div>
+                                <div class="col-span-1 text-center md:translate-y-16">outra coisa</div>
+                                <div class="col-span-2 font-bold text-2xl text-center font-mono pb-8 border-b-2 border-gray-300 md:border-none md:pb-0"><p>titulo do artigo</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a href="https://www.youtube.com">
+                <article class="mb-6 p-2">
+                    <div class="grid md:grid-cols-2 relative pb-10 lg:-mb-3">
+                        <div class="md:col-span-1">
+                            <div class="relative md:col-span-1 w-11/12 m-auto h-80 md:h-60 lg:h-40 bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                            <span class="flex justify-start"><p class="px-4 py-2 mx-2 my-2 rounded-full bg-violet-50">4</p></span>
+                        </div>
+                            <div class="absolute bottom-0 w-full p-2 gap-2 grid grid-cols-2 h-20 bg-violet-50 md:col-span-1 md:h-60 lg:h-40 md:w-1/2 md:right-0 md:top-0 md:flex flex-col md:align-middle">
+                                <div class="col-span-1 text-center md:translate-y-32 lg:-mt-12">dd/mm/aaaa</div>
+                                <div class="col-span-1 text-center md:translate-y-16">outra coisa</div>
+                                <div class="col-span-2 font-bold text-2xl text-center font-mono pb-8 border-b-2 border-gray-300 md:border-none md:pb-0"><p>titulo do artigo</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+            <a href="https://www.youtube.com">
+                <article class="mb-6 p-2">
+                    <div class="grid md:grid-cols-2 relative pb-8 lg:hidden">
+                        <div class="md:col-span-1">
+                            <div class="relative md:col-span-1 w-11/12 m-auto h-80 md:h-60 lg:h-40 bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                            <span class="flex justify-start"><p class="px-4 py-2 mx-2 my-2 rounded-full bg-violet-50">5</p></span>
+                        </div>
+                            <div class="absolute bottom-0 w-full p-2 gap-2 grid grid-cols-2 h-20 bg-violet-50 md:col-span-1 md:h-60 lg:h-40 md:w-1/2 md:right-0 md:top-0 md:flex flex-col md:align-middle">
+                                <div class="col-span-1 text-center md:translate-y-32 lg:-mt-12">dd/mm/aaaa</div>
+                                <div class="col-span-1 text-center md:translate-y-16">outra coisa</div>
+                                <div class="col-span-2 font-bold text-2xl text-center font-mono pb-8 border-b-2 border-gray-300 md:border-none md:pb-0"><p>titulo do artigo</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </a>
+        </div>  
+    </div>
+    </div>
+    <div id="carrosel" class="p-4 mt-4 bg-violet-50">
+        <div>
+            <div class="p-4 text-center text-4xl font-semibold">
+                <p>ShowCase</p>
+            </div>
+        </div>
+        <div class="swiper w-full h-96">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+                <div class="swiper-slide relative bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                    <div class="absolute bottom-0 w-full p-2 h-32 grid grid-cols-2 bg-violet-100">
+                        <span class="col-span-1 text-center">dd/mm/aaaa</span>
+                        <span class="col-span-1 text-center">outra coisa</span>
+                        <span class="col-span-2 font-bold text-2xl text-center font-mono">ahbazqui cubanagana</span>
+                    </div>
+                </div>
+                <div class="swiper-slide relative bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                    <div class="absolute bottom-0 w-full p-2 h-32 grid grid-cols-2 bg-violet-100">
+                        <span class="col-span-1 text-center">dd/mm/aaaa</span>
+                        <span class="col-span-1 text-center">outra coisa</span>
+                        <span class="col-span-2 font-bold text-2xl text-center font-mono">titulo do artigo</span>
+                    </div>
+                </div>
+                <div class="swiper-slide relative bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                    <div class="absolute bottom-0 w-full p-2 h-32 grid grid-cols-2 bg-violet-100">
+                        <span class="col-span-1 text-center">dd/mm/aaaa</span>
+                        <span class="col-span-1 text-center">outra coisa</span>
+                        <span class="col-span-2 font-bold text-2xl text-center font-mono">titulo do artigo</span>
+                    </div>
+                </div>
+                <div class="swiper-slide relative bg-cover" style="background-image: url('https://images4.alphacoders.com/975/thumbbig-97548.webp');">
+                    <div class="absolute bottom-0 w-full p-2 h-32 grid grid-cols-2 bg-violet-100">
+                        <span class="col-span-1 text-center">dd/mm/aaaa</span>
+                        <span class="col-span-1 text-center">outra coisa</span>
+                        <span class="col-span-2 font-bold text-2xl text-center font-mono">titulo do artigo</span>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <!--<div class="swiper-pagination"></div>-->
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev bg-violet-50 p-7 rounded-md"></div>
+            <div class="swiper-button-next bg-violet-50 p-7 rounded-md"></div>
+          
+            <!-- If we need scrollbar -->
+            <!--<div class="swiper-scrollbar"></div>-->
+          </div>
+    </div>
+
+    <div id="footer">
+        <div class="bg-white grid md:grid-cols-2 p-4 border-2 pt-12 font-mono" id="container">
+
+            <div class="text-lg text-left md:text-center">
+                <p class="font-semibold pb-6">Useful links</p>
+                <p>Home</p>           
+                <p>Elements</p>               
+                <p>Tags</p>
+                <p>Authors</p>              
+                <p>Membership</p>
+            </div>
+            
+            <div class="text-lg text-right md:text-center">
+                <p class="font-semibold py-6">Company</p>           
+                <p>Contact us</p>               
+                <p>F.A.Q</p>
+                <p>Authors</p>              
+                <p>Membership</p>
+            </div>
+            
+            <div class="text-lg text-center my-16 md:col-span-2">
+                <p class="font-bold text-4xl pb-4">Logo</p>
+                <p>©2022 Logo. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
