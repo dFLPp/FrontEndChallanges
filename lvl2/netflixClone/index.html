@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Unlimited movies, TV shows, and more.</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+ <div id="wrapper" class="text-white">
+
+    <div class="md:h-screen bg-cover bg-center bg-blend-darken" style="background-image: linear-gradient(rgba(0, 0, 0, 0.575), rgba(0, 0, 0, 0.74)), url(https://pipocasclub.com.br/wp-content/uploads/2019/10/netflix-3.jpg)";>
+        <nav class="flex md:justify-around mb-28 flex-col md:flex-row">
+            <img class="w-72 h-40  mr-auto ml-auto md:ml-0 md:mr-0 md:-mt-4" src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png">
+
+            <button class=" w-64 h-8 mr-auto ml-auto md:w-24 md:h-10 bg-red-600 mt-12 shadow-lg md:mr-10 rounded-md">Sign in</button>
+        </nav>
+        <div class="md:mt-30 pb-16">
+            <div class="text-center tracking-wide">
+                <h3 class="md:text-6xl text-4xl font-semibold">Unlimited movies,</h3>
+                <h3 class="md:text-6xl text-4xl font-semibold">TV shows, and more.</h3>
+                <br>
+                <h5 class="text-xl" style="font-weight: 600;">Watch anywhere. Cancel anytime.</h5>
+                <br>
+                <p  class="text-md" style="font-weight: 500;">Ready to watch? Enter your email to create or restart your membership.</p>
+                <br>
+            </div>
+            <form method="post" class="flex justify-center">
+                <input class="md:w-4/12 md:h-20 w-1/3 h-12 pl-4" type="text" style="color: black;" placeholder="Email adress" required>
+                <input type="submit" class="w-1/3 h-12 md:h-20 md:w-2/12 bg-red-600 text-sm md:text-3xl shadow-xl cursor-pointer" placeholder="Get Started">
+            </form>
+        </div>
+    </div>
+
+    <div id="nextDiv" class="grid md:grid-rows-4 bg-gray-900">
+        <div class="grid md:grid-cols-2 items-center border-t-8 border-gray-600"> 
+            <div class="col-span-1"> 
+                <h3 class="md:text-5xl font-semibold text-center p-12">Enjoy on your "Everywhere".</h3>
+                <h3 class="text-3xl text-center p-12">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h3> 
+            </div>
+            <div class="col-span-1"> <img class= "p-12"src="https://cdn.pixabay.com/photo/2019/02/21/13/32/netflix-4011345_960_720.jpg"> </div>     
+        </div>
+        <div class="grid md:grid-cols-2 items-center border-t-8 border-gray-600"> 
+            <div class="col-span-1"> <img class= "p-12"src="https://cdn.pixabay.com/photo/2022/02/21/06/02/tablet-7025848_960_720.jpg"> </div>   
+            <div class="col-span-1"> 
+                <h3 class="md:text-5xl font-semibold text-center p-12">Download your shows to watch offline.</h3>
+                <h3 class="text-3xl text-center p-12">Save your favorites easily and always have something to watch.</h3> 
+            </div>  
+        </div>
+        <div class="grid md:grid-cols-2 items-center border-t-8 border-gray-600"> 
+            <div class="col-span-1"> 
+                <h3 class="md:text-5xl font-semibold text-center p-12">Watch everywhere.</h3>
+                <h3 class="text-3xl text-center p-12">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</h3> 
+            </div>
+            <div class="col-span-1"> <img class= "p-12"src="https://images.unsplash.com/photo-1521967906867-14ec9d64bee8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"> </div>     
+        </div>
+        <div class="grid md:grid-cols-2 items-center border-b-8 border-t-8 border-gray-600 mb-20"> 
+            <div class="col-span-1"> <img class= "p-12"src="https://occ-0-1722-1723.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABYtvIel4ONUgT0yjngvK5EBa0yDn0accw9SWR5zdy_LrBN22XzBgy8fZOF4OCOHMl5NosWMoJGsGZv2MRNYDFCgWwkU7rA4T_6Hj.png?r=9a8"> </div> 
+            <div class="col-span-1"> 
+                <h3 class="md:text-5xl font-semibold text-center p-12">Create profiles for kids.</h3>
+                <h3 class="text-3xl text-center p-12">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</h3> 
+            </div>    
+        </div>
+    </div>
+
+    <div class="text-center tracking-wide bg-gray-900 border-b-8 border-gray-500">
+        <h3 class="text-4xl pb-12">Frequently Asked Questions</h3>
+        <div class="p-10 m-5">
+            <div id="question1" class="b-8 bg-gray-600 md:w-6/12 ml-auto mr-auto p-4 text-sm md:text-3xl mb-5 hover:bg-gray-700 hover:shadow-md cursor-pointer transition ease-linear duration-300">
+                <p>What is Netflix?</p>
+                <p id="resp1" class="hidden">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+                You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week! </p>
+            </div>
+            <div id="question2" class="b-8 bg-gray-600 md:w-6/12 ml-auto mr-auto p-4 text-sm md:text-3xl mb-5 hover:bg-gray-700 hover:shadow-md cursor-pointer transition ease-linear duration-300">
+                <p>How much does Netflix cost?</p>
+                <p id="resp2" class="hidden">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from BRL25.90 to BRL55.90 a month. No extra costs, no contracts.</p>
+            </div>
+            <div id="question3" class="b-8 bg-gray-600 md:w-6/12 ml-auto mr-auto p-4 text-sm md:text-3xl mb-5 hover:bg-gray-700 hover:shadow-md cursor-pointer transition ease-linear duration-300">
+                <p>How do I cancel?</p>
+                <p id="resp3" class="hidden">Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+            </div>
+            </div>
+            <p  class="text-md" style="font-weight: 500;">Ready to watch? Enter your email to create or restart your membership.</p>
+                <br>
+            <form method="post" class="flex justify-center mb-10">
+                <input class="md:w-4/12 md:h-20 w-1/3 h-12 pl-4" type="text" style="color: black;" placeholder="Email adress" required>
+                <input type="submit" class="w-1/3 h-12 md:h-20 md:w-2/12 bg-red-600 text-sm md:text-3xl shadow-xl cursor-pointer" placeholder="Get Started">
+            </form>
+        </div>
+    </div>
+    <div class="grid grid-cols-4 grid-rows-4 bg-gray-900 p-14 pt-16 text-xs text-gray-400">
+            <div class="p-2"><p>FAQ </p></div>
+            <div class="p-2"><p>Help Center</p></div>
+            <div class="p-2"><p>Account</p></div>
+            <div class="p-2"><p>Media Center</p></div>
+            <div class="p-2"><p>Investor Relations</p></div>
+            <div class="p-2"><p>Jobs</p></div>
+            <div class="p-2"><p>Redeem Gift Cards</p></div>
+            <div class="p-2"><p>Buy Gift Cards</p></div>
+            <div class="p-2"><p>Ways to Watch</p></div>
+            <div class="p-2"><p>Terms of Use</p></div>
+            <div class="p-2"><p>Privacy</p></div>
+            <div class="p-2"><p>Cookie Preferences</p></div>
+            <div class="p-2"><p>Corporate Information</p></div>
+            <div class="p-2"><p>Contact Us</p></div>
+            <div class="p-2"><p>Speed Test</p></div>
+            <div class="p-2"><p>Legal Notices</p></div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
