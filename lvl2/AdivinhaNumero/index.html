@@ -55,7 +55,7 @@
                     <p class="text-center lg:text-3xl md:text-2xl text-xl p-2" id="resp"></p>
 
                     <div id="inputBox" class="-translate-y-28 transition ease-linear duration-200">
-                        <input id="answer" class="border-2 border-black w-2/3 p-2 mb-10 text-center transition ease-linear duration-300" type="text" required>
+                        <input id="answer" maxlength="3" default="0" class="border-2 border-black w-2/3 p-2 mb-10 text-center transition ease-linear duration-300" type="text" required>
                         <br>
                         <button id="guess" onclick="gameRun()" class="p-4 rounded-md bg-yellow-300 align-middle transition ease-linear duration-300">Enviar</button>
                     </div>
@@ -87,8 +87,8 @@
         const inputBox = document.getElementById("inputBox");
         const valuesPlaced = document.getElementById("valuesPlaced");
 
-        var goal = Math.floor(Math.random() * 100);
-        var chances = 10;
+        let goal = Math.floor(Math.random() * 100);
+        let chances = 10;
         
         initBtn.addEventListener('click', () => {
             tutorial.classList.toggle("opacity-0");
@@ -102,7 +102,6 @@
         });
 
         restartBtn.addEventListener('click', () => {
-            
             setTimeout( () => {tutorial.classList.toggle("opacity-0")}, 200);
             setTimeout( () => {tutorial.classList.toggle("hidden")}, 500);
             //tutorial.classList.toggle("opacity-0");
